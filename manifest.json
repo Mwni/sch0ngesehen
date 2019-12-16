@@ -1,0 +1,19 @@
+{
+  "name": "sch0ngesehen",
+  "description": "Erweiterung für pr0gramm.com. Markiert bereits gesehene Bilder.",
+  "version": "1.0",
+
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+     "matches": ["https://pr0gramm.com/*"],
+     "css": ["marker.css"],
+     "js": ["sch0ngesehen.js"]
+    }
+  ],
+
+  "manifest_version": 2
+}
