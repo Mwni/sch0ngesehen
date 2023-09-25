@@ -167,12 +167,16 @@ class Storage{
 
 			log('[Storage] loaded ' + this.chunks.length + ' chunks')
 		}else{
-			this.index = {
-				chunkSize: CHUNK_SIZE,
-				chunks: 0
-			}
+			this.setEmptyIndex()
 
 			log('[Storage] no index, yet. starting empty')
+		}
+	}
+
+	static setEmptyIndex(){
+		this.index = {
+			chunkSize: CHUNK_SIZE,
+			chunks: 0
 		}
 	}
 
@@ -182,6 +186,10 @@ class Storage{
 		this.chunks.forEach(chunk => {
 			window.localStorage.removeItem(this.itemPrefix + 'chunk' + chunk.id)
 		})
+
+		this.currentChunk = null
+		this.chunks = []
+		this.setEmptyIndex()
 
 		log('[Storage] deleted all data')
 	}
