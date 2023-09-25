@@ -1,7 +1,7 @@
 {
   "name": "sch0ngesehen",
   "description": "Erweiterung für pr0gramm.com. Markiert bereits gesehene Bilder.",
-  "version": "1.0",
+  "version": "1.1",
 
   "icons": {
     "128": "icon.png"
