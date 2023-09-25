@@ -208,7 +208,7 @@ class Storage{
 
 		this.currentChunk.add(id)
 
-		console.log('[Storage] marked', id, 'as seen')
+		log('[Storage] marked', id, 'as seen')
 
 		this.flush()
 
@@ -246,7 +246,7 @@ class Storage{
 	static flush(){
 		this.storeString('chunk' + this.currentChunk.id, this.currentChunk.encode())
 
-		console.log('[Storage] flushed')
+		log('[Storage] flushed')
 	}
 
 	static loadJSON(id){
